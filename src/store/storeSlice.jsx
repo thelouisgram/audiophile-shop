@@ -103,6 +103,7 @@ import { createSlice } from "@reduxjs/toolkit";
         shipping: 50,
         vat: 0,
         grandTotal: 0,
+        personalData:[],
     },
     reducers: {
         toggleCart: (state, action) => {
@@ -123,9 +124,12 @@ import { createSlice } from "@reduxjs/toolkit";
         updateGrandTotal: (state, action) => {
             state.grandTotal = action.payload
         },
+        updatePersonalData: (state, action) => {
+            state.personalData = action.payload
+        }
     }
  })
 
 
  export default storeSlice.reducer;
-export const { toggleCart, updateCart, updateCartTotal, updateCartItemsNumber, updateVat, updateGrandTotal } = storeSlice.actions
+export const { toggleCart, updateCart, updateCartTotal, updateCartItemsNumber, updateVat, updateGrandTotal, updatePersonalData } = storeSlice.actions

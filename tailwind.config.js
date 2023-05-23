@@ -17,6 +17,8 @@ export default {
         whitishGrey: 'hsl(0, 0%, 98%)',
         brightOrange:'hsl(0,100%,50%)',
         blackII: 'hsla(0, 0%, 0%, 0.5)',
+        greyBorder: 'hsl(0, 0%, 88%)',
+        strawberryRed: 'hsl(354, 84%, 57%)'
       },
       fontFamily: {
         Manrope : ['Manrope', 'sans-serif'],
