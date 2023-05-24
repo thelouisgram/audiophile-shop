@@ -9,6 +9,7 @@ import Earphones from "./pages/Earphones";
 import ProductPage from "./pages/ProductPage";
 import SharedPart from "./components/SharedPart";
 import Checkout from "./pages/Checkout";
+import Error from "./pages/Error";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
             </Route>
           </Route>
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="*" element={<Error />}/>
         </Route>
       </Routes>
     </HashRouter>

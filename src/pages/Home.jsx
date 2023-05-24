@@ -77,9 +77,11 @@ const Home = () => {
             <h3 className="text-[28px] text-black font-bold  mb-6">
               ZX7 SPEAKER
             </h3>
+            <Link to='/speakers/zx7-speaker'>
             <button className="py-3 px-6 text-[15px] font-bold  text-black border-[1px] border-black">
               SEE PRODUCT
             </button>
+            </Link>
           </div>
         </section>
       </div>

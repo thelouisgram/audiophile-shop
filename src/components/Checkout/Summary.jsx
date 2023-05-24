@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {updateVat, updateGrandTotal } from "../../store/storeSlice";
 import PropTypes from 'prop-types'
 
-const Summary = ({ cartItems, handleSubmit }) => {
+const Summary = ({ items, handleSubmit }) => {
     const dispatch = useDispatch();
     const { shipping, cartTotal, vat, cartArray, grandTotal } = useSelector(
         (state) => state.app
@@ -18,7 +18,11 @@ const Summary = ({ cartItems, handleSubmit }) => {
           <h3 className="text-[18px] tracking-[0.1em] font-bold text-black mb-10">
               SUMMARY
           </h3>
-          <div className="flex flex-col gap-6 w-full mb-10">{cartItems}</div>
+          <div className="flex flex-col gap-6 w-full mb-10">
+              {items.length < 1 && <h1 className='text-elements text-center font-bold text-[16px] tracking-[0.06em]'>No Cart Items</h1>}
+            {items}
+          </div>
+          
           <div className="mb-10">
               <div className="flex justify-between items-center w-full">
                   <h3 className="text-elements text-[15px]">TOTAL</h3>
@@ -56,7 +60,7 @@ const Summary = ({ cartItems, handleSubmit }) => {
 
 Summary.propTypes = {
     handleSubmit : PropTypes.func.isRequired,
-    cartItems : PropTypes.array.isRequired,
+    items : PropTypes.array.isRequired,
 }
 
 export default Summary

@@ -13,6 +13,10 @@
 }
 
 .scroll-container::-webkit-scrollbar {
+  width: 0;
+}
+
+.scroll-container:hover::-webkit-scrollbar {
   width: 6px;
 }
 
@@ -26,6 +30,6 @@
   border-radius: 3px;
 }
 
-.scroll-container::-webkit-scrollbar-thumb:hover {
+.scroll-container:hover::-webkit-scrollbar-thumb {
   background-color: #555;
 }

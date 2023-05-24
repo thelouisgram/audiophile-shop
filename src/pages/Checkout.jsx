@@ -49,7 +49,7 @@ const Checkout = () => {
           Go Back
         </div>
         <div className="flex gap-12 w-full mb-48">
-            <CheckOutComponent cartItems={cartItems}/>
+            <CheckOutComponent items={cartItems}/>
         </div>
       </section>
     </div>
