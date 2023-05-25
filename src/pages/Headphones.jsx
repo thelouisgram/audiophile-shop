@@ -2,7 +2,7 @@ import React from "react";
 import productData from "../../public/products.json";
 import { useEffect } from "react";
 import { scrollToTop } from "../components/Utils/Shared";
-import CategoryComponent from "../components/CategoryComponent";
+import Product from "../components/Categories/Product";
 
 const Headphones = () => {
   useEffect(() => {
@@ -16,7 +16,7 @@ const Headphones = () => {
   const headphone = headphones.map((item, index) => {
     return (
       <div key={index}>
-        <CategoryComponent item={item} index={index} />
+        <Product item={item} index={index} />
       </div>
     );
   });

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleCart } from "../store/storeSlice";
 import CheckOutComponent from "../components/Checkout/CheckOutComponent";
+import CheckOutItems from "../components/Checkout/CheckOutItems";
 
 const Checkout = () => {
   const dispatch = useDispatch();
@@ -16,24 +17,10 @@ const Checkout = () => {
     window.history.back();
   };
 
-  const cartItems = cartArray.map((item) => {
+  const cartItems = cartArray.map((item, index) => {
     return (
-      <div key={item.id} className="flex items-center justify-between">
-        <div className="flex items-center">
-          <img
-            src={item.cartImage}
-            className="w-[64px] h-auto rounded-[8px] mr-3"
-          />
-          <div className="flex flex-col">
-            <h3 className="font-bold text-black text-[15px]">
-              {item.shortName}
-            </h3>
-            <h4 className="text-elements text-[14px]">
-              $ {item.price.toLocaleString()}
-            </h4>
-          </div>
-        </div>
-        <div className="text-elements font-medium">x{item.number}</div>
+      <div key={index}>
+        <CheckOutItems item={item}/>
       </div>
     );
   });

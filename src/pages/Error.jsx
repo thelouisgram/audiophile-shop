@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import Error404 from '../components/404';
+import Error404 from '../components/Error/404';
 
 const Error = () => {
     
