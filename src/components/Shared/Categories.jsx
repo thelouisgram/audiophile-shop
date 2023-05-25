@@ -4,7 +4,6 @@ import { Link } from "react-router-dom"
 
 const Categories = () => {
     return (
-        <div>
             <section className="flex py-24 w-[1100px] mx-auto">
                 <div className="w-full flex flex-wrap justify-between gap-8">
                     <Link to='/headphones' className=" text-elements flex flex-col p-1 border-transparent border-2 
@@ -66,7 +65,6 @@ const Categories = () => {
                     </Link>
                 </div>
             </section>
-        </div>
     )
 }
 

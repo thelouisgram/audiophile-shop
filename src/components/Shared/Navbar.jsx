@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleCart } from "../store/storeSlice";
+import { toggleCart } from "../../store/storeSlice";
 
 const Navbar = () => {
   const { cart, cartItemsNumber } = useSelector((state) => state.app);
@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <div className="bg-black w-full h-[84px] ">
       <header
-        className="w-[1100px] text-white border-b-[1px] border-border
+        className="w-[1100px] text-white 
                             h-full mx-auto flex items-center justify-between"
       >
         <Link to="/">

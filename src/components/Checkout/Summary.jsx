@@ -51,7 +51,8 @@ const Summary = ({ items, handleSubmit }) => {
           </div>
           <button 
           onClick={handleSubmit}
-          className="bg-orange w-full h-[50px] text-[13px] tracking-[0.2em] items-center text-white font-bold">
+        disabled={cartArray.length < 1}
+         className={` ${cartArray.length < 1 ? 'cursor-not-allowed bg-orangeAccent' : 'cursor-pointer'} bg-orange w-full h-[50px] text-[13px] tracking-[0.2em] items-center text-white font-bold`}>
               CONTINUE & PAY
           </button>
       </div>

@@ -1,13 +1,13 @@
 import { HashRouter, Routes, Route } from "react-router-dom";
-import SharedLayout from "./components/SharedLayout";
+import SharedLayout from "./components/SharedElements/SharedLayout";
 import Home from "./pages/Home";
 import React from "react";
 import Headphones from "./pages/Headphones";
-import SharedCategory from "./components/SharedCategory";
+import SharedCategory from "./components/SharedElements/SharedCategory";
 import Speakers from "./pages/Speakers";
 import Earphones from "./pages/Earphones";
 import ProductPage from "./pages/ProductPage";
-import SharedPart from "./components/SharedPart";
+import SharedPart from "./components/SharedElements/SharedPart";
 import Checkout from "./pages/Checkout";
 import Error from "./pages/Error";
 
@@ -35,7 +35,7 @@ const App = () => {
             </Route>
           </Route>
           <Route path="/checkout" element={<Checkout />} />
-          <Route path="*" element={<Error />}/>
+          <Route path="*" element={<Error />} />
         </Route>
       </Routes>
     </HashRouter>

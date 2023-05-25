@@ -5,11 +5,12 @@ import {
   updateCartItemsNumber,
   updateCartTotal,
   updateCart,
-} from "../store/storeSlice";
+  updateNotifMessage
+} from "../../store/storeSlice";
 import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { cart, cartArray, cartTotal, cartItemsNumber } = useSelector(
+  const { cart, cartArray, cartTotal, cartItemsNumber, notifMessage } = useSelector(
     (state) => state.app
   );
   const dropdownRef = useRef(null);
@@ -57,6 +58,7 @@ const Cart = () => {
 
   const removeAll = () => {
     dispatch(updateCart([]));
+    dispatch(updateNotifMessage([...notifMessage, "Cart is empty"]))
   };
 
   useEffect(() => {
@@ -139,7 +141,7 @@ const Cart = () => {
                     </h3>
                     <div
                       onClick={removeAll}
-                      className="text-elements underline text-[15px] cursor-pointer"
+                      className="text-elements underline text-[15px] cursor-pointer hover:text-orange"
                     >
                       Remove All
                     </div>
@@ -154,7 +156,8 @@ const Cart = () => {
                     </h3>
                   </div>
                   <Link to="/checkout">
-                    <button className="bg-orange w-full h-[50px] text-[13px] tracking-[0.2em] items-center text-white font-bold">
+                    <button className="bg-orange w-full h-[50px] text-[13px] tracking-[0.2em] items-center hover:bg-orangeAccent
+                    cursor-pointer text-white font-bold">
                       CHECKOUT
                     </button>
                   </Link>

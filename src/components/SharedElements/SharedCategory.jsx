@@ -1,6 +1,6 @@
 import React from 'react'
 import { Outlet } from "react-router-dom"
-import Categories from './Categories'
+import Categories from '../Shared/Categories'
 
 const SharedCategory = () => {
   return (

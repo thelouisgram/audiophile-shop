@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 
 .speaker{
     background-image: url('/public/images/home/desktop/pattern-circles.svg');
@@ -13,10 +17,6 @@
 }
 
 .scroll-container::-webkit-scrollbar {
-  width: 0;
-}
-
-.scroll-container:hover::-webkit-scrollbar {
   width: 6px;
 }
 

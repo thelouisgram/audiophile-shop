@@ -1,5 +1,5 @@
 import React from 'react'
-import About from './About'
+import About from '../Shared/About'
 import { Outlet } from 'react-router-dom'
 
 const SharedPart = () => {
