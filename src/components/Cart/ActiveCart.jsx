@@ -5,8 +5,8 @@ import RemoveAllBtn from './RemoveAllBtn'
 
 const ActiveCart = ({ cartItems, cartItemsNumber, cartTotal, removeAll}) => {
   return (
-      <div>
-          <div className="flex justify-between items-center mb-8">
+      <div className='bg-white rounded-[10px] w-full h-auto p-8'>
+          <div className="flex justify-between  items-center mb-8">
               <h3 className="font-bold text-black text-[17px]">
                   CART ( {cartItemsNumber} )
               </h3>

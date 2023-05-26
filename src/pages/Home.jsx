@@ -9,6 +9,7 @@ import { scrollToTop } from "../components/Utils/Shared";
 
 const Home = () => {
   
+  // Scroll to the top on re-render
   useEffect(() => {
     scrollToTop();
   }, []);

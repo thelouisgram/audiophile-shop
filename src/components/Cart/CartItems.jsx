@@ -2,16 +2,18 @@ import React from 'react'
 
 const CartItems = ({minusCartItem, addCartItem, item}) => {
   return (
-      <div className="flex items-center pr-2">
+      <div className="flex items-center pr-1 justify-between w-full">
+          <div className='flex gap-2 items-center'>
           <div>
               <img
                   src={item.cartImage}
-                  className="w-[64px] h-auto rounded-[8px] mr-2"
+                  className="w-[64px] h-auto rounded-[8px] "
               />
           </div>
-          <div className="flex flex-col mr-16 w-20">
+          <div className="flex flex-col">
               <h3 className="font-bold text-black text-[15px]">{item.shortName}</h3>
               <h4 className="text-elements text-[14px]">$ {item.price.toLocaleString()}</h4>
+          </div>
           </div>
           <div className="bg-grey w-[100px] h-[36px] justify-center items-center flex text-[15px] font-bold gap-3 text-black overflow-hidden">
               <button

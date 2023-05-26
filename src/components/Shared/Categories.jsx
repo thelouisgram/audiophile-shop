@@ -4,8 +4,8 @@ import { Link } from "react-router-dom"
 
 const Categories = () => {
     return (
-            <section className="flex py-24 w-[1100px] mx-auto">
-                <div className="w-full flex flex-wrap justify-between gap-8">
+            <section className="flex py-10 md:py-24 w-full md:w-[1100px] px-4 xs:px-6 md:px-0 mx-auto">
+                <div className="w-full flex flex-col md:flex-row flex-wrap justify-between gap-16 md:gap-8">
                     <Link to='/headphones' className=" text-elements flex flex-col p-1 border-transparent border-2 
                     focus:outline-none focus:border-dashed focus:border-2 focus:border-brightOrange
                      items-center relative h-[180px] flex-1 pt-[100px] bg-grey rounded-[10px] cursor-pointer hover:text-orange">
@@ -18,7 +18,7 @@ const Categories = () => {
                         <h3 className="mb-4 text-[17px] font-bold tracking-[0.1em] text-black">
                             HEADPHONES
                         </h3>
-                        <div className="flex gap-3 items-center">
+                    <div className="flex gap-3 items-center mb-3">
                             <h4 className="text-[13px] font-medium ">
                                 SHOP
                             </h4>
@@ -37,8 +37,8 @@ const Categories = () => {
                         <h3 className="mb-4 text-[17px] font-bold tracking-[0.1em] text-black">
                             SPEAKERS
                         </h3>
-                        <div className="flex gap-3 items-center">
-                            <h4 className="text-[13px] font-medium ">
+                    <div className="flex gap-3 items-center mb-3">
+                            <h4 className="text-[13px] font-medium">
                                 SHOP
                             </h4>
                             <img src="/images/shared/desktop/icon-arrow-right.svg" />
@@ -56,7 +56,7 @@ const Categories = () => {
                         <h3 className="mb-4 text-[17px] font-bold tracking-[0.1em] text-black">
                             EARPHONES
                         </h3>
-                        <div className="flex gap-3 items-center">
+                        <div className="flex gap-3 items-center mb-3">
                             <h4 className="text-[13px] font-medium ">
                                 SHOP
                             </h4>

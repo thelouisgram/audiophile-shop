@@ -3,22 +3,25 @@ import { Link } from 'react-router-dom'
 
 const Yx1Earphones = () => {
   return (
-      <div className="w-full bg-whitishGrey mb-12">
-          <section className="h-auto w-[1100px] rounded-[10px] mx-auto earphones">
-              <div className="flex gap-8 h-[300px]">
-                  <div className="w-1/2 h-full">
+          <section className="h-auto w-full md:w-[1100px] px-4 xs:px-6 md:px-0 mb-20 md:mb-40 mx-auto earphones">
+              <div className="flex flex-col w-full md:justify-between md:flex-row gap-6 md:gap-8 md:h-[300px]">
+                  <div className="md:w-1/2 h-full">
                       <img
                           src="/images/home/desktop/image-earphones-yx1.jpg"
-                          className="h-full w-full rounded-[10px] object-cover"
+                          className="h-full w-full rounded-[10px] object-cover hidden md:flex"
+                      />
+                      <img
+                          src="/images/home/mobile/image-earphones-yx1.jpg"
+                          className="h-full w-full rounded-[10px] object-cover flex md:hidden"
                       />
                   </div>
-                  <div className="w-1/2 flex flex-col justify-center pl-24 bg-grey rounded-[10px]">
-                      <h3 className="text-[28px] text-black font-bold  mb-6">
+                  <div className="md:w-1/2 flex flex-col py-16 md:py-0 justify-center pl-6 md:pl-24 bg-grey rounded-[10px]">
+                      <h3 className="text-[20px] md:text-[28px] text-black font-bold mb-6">
                           YX1 EARPHONES
                       </h3>
                       <div>
                           <Link to='/earphones/yx1-earphones'>
-                              <button className="py-3 px-6 text-[15px] font-bold hover:bg-black hover:text-white cursor-pointer text-black border-[1px] border-black">
+                              <button className="py-2 px-4 xs:py-3 xs:px-6 text-[12px] xs:text-[15px] font-bold hover:bg-black hover:text-white cursor-pointer text-black border-[1px] border-black">
                                   SEE PRODUCT
                               </button>
                           </Link>
@@ -26,7 +29,6 @@ const Yx1Earphones = () => {
                   </div>
               </div>
           </section>
-      </div>
   )
 }
 
