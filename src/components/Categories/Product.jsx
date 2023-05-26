@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import OrangeBtn from '../Buttons/orangeBtn';
+import OrangeSeeProduct from '../Buttons/OrangeSeeProduct';
 
 const Product = ({ item, index }) => {
   return (
@@ -22,7 +22,7 @@ const Product = ({ item, index }) => {
         </h2>
         <p className='text-[15px] leading-[1.5em] text-elements w-[450px] mb-8'>{item.description}</p>
         <Link to={item.slug}>
-          <OrangeBtn />
+          <OrangeSeeProduct />
         </Link>
       </div>
     </div>

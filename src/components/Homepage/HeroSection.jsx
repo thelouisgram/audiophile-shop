@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link } from 'react-router-dom'
-import OrangeBtn from '../Buttons/OrangeBtn'
+import OrangeSeeProduct from '../Buttons/OrangeSeeProduct'
 
 const HeroSection = () => {
   return (
@@ -19,7 +19,7 @@ const HeroSection = () => {
                       made for the passionate music enthusiast.
                   </p>
                   <Link to="/headphones/xx99-mark-two-headphones">
-                      <OrangeBtn />
+                      <OrangeSeeProduct />
                   </Link>
               </div>
               <div className="absolute w-auto h-[700px] mt-[-90px] z-[0]">
