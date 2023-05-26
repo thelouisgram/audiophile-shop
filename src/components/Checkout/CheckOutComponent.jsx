@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import NameInput from "./inputs/NameInput";
-import PhoneNumberInput from "./inputs/PhoneNumberInput";
-import EmailInput from "./inputs/EmailInput";
 import ShippingInfo from "./inputs/ShippingInfo";
 import Summary from './Summary'
 import { updateCompleteOrder, updateThankYou, updateCart } from '../../store/storeSlice'
 import { useDispatch, useSelector } from "react-redux";
+import BillingDetails from "./inputs/BillingDetails/BillingDetails";
+import PaymentMethod from './PaymentMethod'
 
 const CheckOutComponent = ({ items }) => {
     const dispatch = useDispatch()
@@ -129,7 +128,6 @@ const CheckOutComponent = ({ items }) => {
         // }
     };
 
-    console.log(completeOrder)
 
     return (
         <div className="flex gap-8 w-[1100px] mx-auto ">
@@ -137,28 +135,10 @@ const CheckOutComponent = ({ items }) => {
                 <div>
                     <h1 className="font-bold text-[28px] mb-8">CHECKOUT</h1>
                     <form onSubmit={handleSubmit} className="flex flex-col w-full">
-                        <div className='mb-8'>
-                            <h3 className="text-orange text-[14px] font-bold mb-5">
-                                BILLING DETAILS
-                            </h3>
-                            <div className="w-full flex gap-6 mb-6">
-                                <NameInput
-                                    value={formData.name}
-                                    error={errors.name}
-                                    onChange={handleChange}
-                                />
-                                <PhoneNumberInput
-                                    value={formData.phoneNumber}
-                                    error={errors.phoneNumber}
-                                    onChange={handleChange}
-                                />
-                            </div>
-                            <EmailInput
-                                value={formData.email}
-                                error={errors.email}
-                                onChange={handleChange}
-                            />
-                        </div>
+                        <BillingDetails 
+                            formData = {formData}
+                            errors = {errors} 
+                            handleChange = {handleChange} />
                         <div>
                             <h3 className="text-orange text-[14px] font-bold mb-5">
                                 SHIPPING INFO
@@ -174,21 +154,7 @@ const CheckOutComponent = ({ items }) => {
                                 />
                             </div>
                         </div>
-                        <div className='mb-8'>
-                            <h3 className="text-orange text-[14px] font-bold mb-5">
-                                PAYMENT METHOD
-                            </h3>
-                            <div className='w-[300px] mb-8 border-[1px] border-greyBorder p-4 rounded-[5px]  flex gap-3 font-bold text-[15px] items-center'>
-                                <div className='flex items-center justify-center border-greyBorder border-[1px] p-1 rounded-full'>
-                                    <div className='w-3 h-3 bg-orange rounded-full' />
-                                </div>
-                                <h3>Cash on Delivery</h3>
-                            </div>
-                            <div className='flex w-full gap-6 items-center'>
-                                <img src='/images/checkout/icon-cash-on-delivery.svg' className='w-auto h-[48px]' />
-                                <p className='text-elements text-[14px]'>The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.</p>
-                            </div>
-                        </div>
+                        <PaymentMethod />
                     </form>
                 </div>
             </div>

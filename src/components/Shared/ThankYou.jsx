@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { updateThankYou } from '../../store/storeSlice';
+import OrderedItems from '../ThankYou/OrderedItems';
+import SingleItem from '../ThankYou/SingleItem';
+import MultipleItems from '../ThankYou/MultipleItems';
 
 const ThankYou = () => {
   const dispatch = useDispatch();
@@ -22,15 +25,8 @@ const ThankYou = () => {
   const renderedItems = fullItems ? currentItems : [currentItems[0]];
 
   const items = renderedItems.map((item, index) => (
-    <div key={index} className="flex w-full justify-between items-center">
-      <div className="flex gap-1 items-center">
-        <img src={item.cartImage} className="w-[64px] h-auto rounded-[8px] mr-2" alt="Product" />
-        <div className="flex flex-col">
-          <h3 className="font-bold text-black text-[15px]">{item.shortName}</h3>
-          <h4 className="text-elements text-[14px]">$ {item.price.toLocaleString()}</h4>
-        </div>
-      </div>
-      <div className="text-elements font-medium">x{item.number}</div>
+    <div key={index}>
+      <OrderedItems item={item} />
     </div>
   ));
 
@@ -43,27 +39,14 @@ const ThankYou = () => {
           <p className="text-elements">You will receive an email confirmation shortly.</p>
           <div className="w-full flex h-auto rounded-[5px] overflow-hidden mb-4">
             {!fullItems ? (
-              <div className="bg-grey px-4 w-1/2 flex flex-col gap-2 justify-center max-h-[125px]">
-                {items}
-                {currentItems.length > 1 && (
-                  <p
-                    onClick={handleToggleItems}
-                    className="hover:underline text-elements text-center text-[14px] cursor-pointer"
-                  >
-                    and {currentItems.length - 1} other item{currentItems.length > 2 ? 's' : ''}
-                  </p>
-                )}
-              </div>
+              <SingleItem
+                items={items}
+                currentItems={currentItems}
+                handleToggleItems = {handleToggleItems} />
             ) : (
-              <div className="bg-grey px-4 w-1/2 flex flex-col gap-3 max-h-[125px] overflow-auto scroll-container">
-                {items}
-                <p
-                  onClick={handleToggleItems}
-                  className="hover:underline text-elements border-[1px] py-[2px] px-1 border-elements text-center text-[14px] mb-4 cursor-pointer"
-                >
-                  see less
-                </p>
-              </div>
+              <MultipleItems
+                items={items} 
+                handleToggleItems = {handleToggleItems} />
             )}
             <div className="bg-black px-6 w-1/2 h-[125px] flex flex-col gap-3 justify-center font-bold">
               <h3 className="text-elements font-medium">GRAND TOTAL</h3>
@@ -73,7 +56,7 @@ const ThankYou = () => {
           <Link to="/">
             <button
               onClick={() => dispatch(updateThankYou(false))}
-              className="bg-orange text-[14px] tracking-[0.1em] text-white py-3 font-bold w-full flex justify-center cursor-pointer"
+              className="bg-orange hover:bg-orangeAccent text-[14px] tracking-[0.1em] text-white py-3 font-bold w-full flex justify-center cursor-pointer"
             >
               BACK TO HOME
             </button>
