@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link } from 'react-router-dom'
-import OrangeBtn from '../Buttons/orangeBtn'
+import OrangeBtn from '../Buttons/OrangeBtn'
 
 const HeroSection = () => {
   return (
