@@ -4,11 +4,11 @@ import productData from "../../public/products.json";
 import { updateCart, updateNotifMessage } from "../store/storeSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { scrollToTop, goBack } from "../components/Utils/Shared";
-import Others from "../components/ProductsPageComponents/Others";
-import YouMayLike from "../components/ProductsPageComponents/YouMayLike";
-import Gallery from "../components/ProductsPageComponents/Gallery";
-import Features from '../components/ProductsPageComponents/Features';
-import Info from "../components/ProductsPageComponents/Info";
+import Others from "../components/ProductsPage/Others";
+import YouMayLike from "../components/ProductsPage/YouMayLike";
+import Gallery from "../components/ProductsPage/Gallery";
+import Features from '../components/ProductsPage/Features';
+import Info from "../components/ProductsPage/Info";
 
 const ProductPage = () => {
   const [itemNumber, setItemNumber] = useState(1);
