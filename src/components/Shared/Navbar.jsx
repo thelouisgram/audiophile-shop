@@ -1,11 +1,12 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { NavLink, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { toggleCart } from "../../store/storeSlice";
+import { toggleCart, toggleNav } from "../../store/storeSlice";
+import { useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   // Destructuring Global state
-  const { cart, cartItemsNumber } = useSelector((state) => state.app);
+  const { cart, cartItemsNumber, nav } = useSelector((state) => state.app);
   const dispatch = useDispatch();
 
   // Function to toggle cart visibility
@@ -13,13 +14,29 @@ const Navbar = () => {
       dispatch(toggleCart(cart ? false : true))
   }
 
+  // Function to handle mobile navBar
+  const handleNav = () => {
+    dispatch(toggleNav(nav ? false : true))
+  }
+
+  const location = useLocation();
+
+  // Listen to location changes and update nav value
+  useEffect(() => {
+    dispatch(toggleNav(false)); // Set nav to false when navigating to a new page
+  }, [dispatch, location]);
+
+
   return (
-    <div className="bg-black w-full h-[84px] ">
+    <div className="bg-black w-full relative h-[84px]">
       <header
-        className="md:w-[1100px] text-white 
-        h-full md:mx-auto flex items-center justify-between p-4 md:p-0"
+        className="md:w-[1100px] z-[10] w-full text-white absolute md:relative
+        h-full md:mx-auto flex items-center justify-between px-4 xs:px-6 md:p-0"
       >
-        <img src='/images/shared/tablet/icon-hamburger.svg' className="flex md:hidden"/>
+        <div onClick={handleNav}>
+          {!nav ? <img src='/images/shared/tablet/icon-hamburger.svg' className="flex md:hidden"/> :
+            <img src='/images/shared/tablet/icon-close-menu.svg' className="flex md:hidden" />}
+        </div>
         <Link to="/">
           <div className="flex items-center">
             <img src="/images/shared/desktop/logo.svg" />

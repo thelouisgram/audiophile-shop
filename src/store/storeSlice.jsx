@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const storeSlice = createSlice({
   name: "state",
   initialState: {
+    nav: false,
     cart: false,
     cartArray: [],
     cartTotal: 0,
@@ -42,6 +43,9 @@ const storeSlice = createSlice({
     updateNotifMessage: (state, action) => {
       state.notifMessage = action.payload;
     },
+    toggleNav: (state, action) => {
+      state.nav = action.payload;
+    }
   },
 });
 
@@ -55,5 +59,6 @@ export const {
   updateGrandTotal,
   updateCompleteOrder,
   updateThankYou,
-  updateNotifMessage
+  updateNotifMessage,
+  toggleNav,
 } = storeSlice.actions;

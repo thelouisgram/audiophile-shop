@@ -12,7 +12,7 @@ const HeroSection = () => {
                   <h4 className="tracking-[0.8em] text-elements text-[14px] mb-4 md:mb-0 font-bold">
                       NEW PRODUCT
                   </h4>
-                  <h1 className="text-[36px] xs:text-[50px] md:text-[56px] text-white font-bold leading-[1.1em] mb-6 md:mb-8">
+                  <h1 className="text-[36px] xs:text-[50px] md:text-[56px] text-white font-bold leading-[1.1em] mb-10">
                       XX99 MARK II <br />
                       HEADPHONES
                   </h1>
@@ -33,7 +33,7 @@ const HeroSection = () => {
                   />
                   <img
                       src="/images/home/mobile/image-hero.jpg"
-                      className="w-auto h-full object-cover md:hidden flex"
+                      className="w-full h-auto object-cover md:hidden flex"
                   />
               </div>
           </section>
