@@ -33,8 +33,8 @@ const Notif = () => {
             {notifMessage.map((item, index) => (
                 <div key={index} className="bg-green p-3 w-full rounded-[5px] flex gap-2 justify-between">
                     <div className="h-full flex items-center gap-2">
-                        <i className="fa-solid fa-circle-check text-white text-[18px]"></i>
-                        <h2 className="text-white font-bold mr-4">{item}</h2>
+                        <i className="fa-solid fa-circle-check text-white text-[16px] ss:text-[18px]"></i>
+                        <h2 className="text-white text-[10px] xs:text-[14px] md:text-[16px] font-bold mr-4">{item}</h2>
                     </div>
                     <div className="flex items-start h-full cursor-pointer" onClick={() => handleDelete(index)}>
                         <i className="fa-solid fa-xmark text-[14px] text-white"></i>

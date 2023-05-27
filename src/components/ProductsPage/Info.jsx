@@ -27,16 +27,16 @@ const Info = ({product, minusItemNumber, itemNumber, addToCart, addItemNumber}) 
                   <div className="bg-grey md:w-[125px] justify-center items-center flex text-[17px] font-bold gap-3 text-black">
                       <button
                           onClick={minusItemNumber}
-                          className="text-elements hover:bg-[#D3D3D3] hover:text-orange px-4 py-3"
+                          className="text-elements hover:bg-[#D3D3D3] hover:text-orange px-2 xs:px-4 py-2 xs:py-3"
                       >
                           -
                       </button>
-                      <div className="text-[13px] text-[14px] flex items-center justify-center x-30[px] md:w-[40px]">
+                      <div className="text-[13px] xs:text-[14px] flex items-center justify-center w-[24px] md:w-[40px]">
                           {itemNumber}
                       </div>
                       <button
                           onClick={addItemNumber}
-                          className="text-elements hover:bg-[#D3D3D3] hover:text-orange px-4 py-3"
+                          className="text-elements hover:bg-[#D3D3D3] hover:text-orange px-2 xs:px-4 py-2 xs:py-3"
                       >
                           +
                       </button>

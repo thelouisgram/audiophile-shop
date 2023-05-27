@@ -33,10 +33,10 @@ const Navbar = () => {
         className="md:w-[1100px] z-[10] w-full text-white absolute md:relative
         h-full md:mx-auto flex items-center justify-between px-4 xs:px-6 md:p-0"
       >
-        <div onClick={handleNav}>
+        {nav && <div onClick={handleNav}>
           {!nav ? <img src='/images/shared/tablet/icon-hamburger.svg' className="flex md:hidden"/> :
             <img src='/images/shared/tablet/icon-close-menu.svg' className="flex md:hidden" />}
-        </div>
+        </div>}
         <Link to="/">
           <div className="flex items-center">
             <img src="/images/shared/desktop/logo.svg" />

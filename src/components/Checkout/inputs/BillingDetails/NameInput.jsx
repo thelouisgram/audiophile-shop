@@ -2,29 +2,29 @@ import React from 'react'
 import PropTypes from 'prop-types';
 
 const NameInput = ({ value, error, onChange }) => {
-  return (
-      <div className="flex flex-col flex-1">
-          <div className="flex justify-between items-center w-[300px] mb-2">
-              <label
-                  className={`text-[13px] font-bold ${!error ? "text-black" : "text-strawberryRed"}`}
-                  htmlFor="name"
-              >
-                  Name
-              </label>
-              {error && <span className={`text-[13px] text-strawberryRed`}>{error}</span>}
-          </div>
-          <input
-              id="name"
-              type="text"
-              name="name"
-              value={value}
-              placeholder='Alexei Ward'
-              onChange={onChange}
-              className={`${error ? "border-strawberryRed" : "border-greyBorder"} px-4 rounded-[5px] py-4 border-[1px] w-[300px] text-[14px] 
+    return (
+        <div className="flex flex-col flex-1 w-full">
+            <div className="flex justify-between items-center w-full md:w-[300px] mb-2">
+                <label
+                    className={`text-[13px] font-bold ${!error ? "text-black" : "text-strawberryRed"}`}
+                    htmlFor="name"
+                >
+                    Name
+                </label>
+                {error && <span className={`text-[13px] text-strawberryRed`}>{error}</span>}
+            </div>
+            <input
+                id="name"
+                type="text"
+                name="name"
+                value={value}
+                placeholder='Alexei Ward'
+                onChange={onChange}
+                className={`${error ? "border-strawberryRed" : "border-greyBorder"} px-4 rounded-[5px] py-4 border-[1px] w-full md:w-[300px] text-[14px] 
         placeholder:text-elements placeholder:font-medium font-bold focus:outline-[1px] focus:outline-orange`}
-          />
-      </div>
-  )
+            />
+        </div>
+    )
 }
 
 NameInput.propTypes = {

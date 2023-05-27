@@ -27,7 +27,7 @@ const Checkout = () => {
 
   return (
     <div>
-      <section className="pt-20 w-[1100px] mx-auto">
+      <section className="pt-6 md:pt-20 px-4 xs:px-6 md:px-0 w-full md:w-[1100px] mx-auto">
         {/* Go Back Button */}
         <div
           className="text-elements mb-8 cursor-pointer hover:underline w-[100px]"
@@ -35,7 +35,7 @@ const Checkout = () => {
         >
           Go Back
         </div>
-        <div className="flex gap-12 w-full mb-48">
+        <div className="flex gap-12 w-full mb-24 md:mb-48">
             <CheckOutComponent items={cartItems}/>
         </div>
       </section>

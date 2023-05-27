@@ -14,7 +14,7 @@ const Summary = ({ items, handleSubmit }) => {
     dispatch(updateVat(cartTotal * 0.19));
   }, [cartArray, cartTotal, dispatch, shipping, vat]);
   return (
-    <div className="bg-white rounded-[5px] p-8 h-auto">
+    <div className="bg-white rounded-[5px] px-4 py-6 xs:p-6 md:p-8 h-auto">
       <h3 className="text-[18px] tracking-[0.1em] font-bold text-black mb-10">
         SUMMARY
       </h3>

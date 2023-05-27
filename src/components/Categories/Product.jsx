@@ -21,7 +21,7 @@ const Product = ({ item, index }) => {
         <h2 className="text-[28px] font-bold text-black uppercase md:w-[250px] leading-[1.1em] mb-8">
           {item.name}
         </h2>
-        <p className='text-[15px] leading-[1.5em] text-elements md:w-[450px] mb-8'>{item.description}</p>
+        <p className='text-[13px] xs:text-[15px] leading-[1.5em] text-elements md:w-[450px] mb-8'>{item.description}</p>
         <Link to={item.slug} className='flex w-full md:justify-start justify-center '>
           <OrangeSeeProduct />
         </Link>

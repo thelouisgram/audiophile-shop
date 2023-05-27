@@ -95,7 +95,7 @@ const Cart = () => {
           <div className="md:w-[1100px] w-full  relative mx-auto h-full ">
             <div
               ref={dropdownRef}
-              className={`h-auto w-full flex absolute px-4 xs:px-6 md:px-0 top-[94px] md:justify-end right-0 z-[6]`}
+              className={`h-auto w-full flex absolute px-3 xs:px-6 md:px-0 top-[94px] md:justify-end right-0 z-[6]`}
             >
               {cartArray.length < 1 && (
                 <EmptyCart />

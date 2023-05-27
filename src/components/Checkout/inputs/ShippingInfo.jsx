@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const ShippingInfo = ({ address, city, country, postalCode, errors, onChange }) => {
     return (
         <div>
-            <div className="flex flex-col w-auto mb-6">
+            <div className="flex flex-col w-full md:w-auto mb-6">
                 <div className="flex justify-between items-center w-full mb-2">
                     <label
                         className={`text-[13px] font-bold ${errors.address ? "text-strawberryRed" : "text-black"
@@ -25,13 +25,14 @@ const ShippingInfo = ({ address, city, country, postalCode, errors, onChange }) 
                     value={address}
                     onChange={onChange}
                     className={`${errors.address ? "border-strawberryRed" : "border-greyBorder"
-                        } px-4 rounded-[5px] py-4 border-[1px] w-full text-[14px] placeholder:text-elements placeholder:font-medium font-bold focus:outline-[1px] focus:outline-orange`}
+                        } px-4 rounded-[5px] py-4 border-[1px] w-full text-[14px] placeholder:text-elements 
+                        placeholder:font-medium font-bold focus:outline-[1px] focus:outline-orange`}
                 />
             </div>
 
-            <div className="flex justify-between mb-6">
-            <div className="flex flex-col w-auto">
-                <div className="flex justify-between items-center w-[300px] mb-2">
+            <div className="flex flex-col md:flex-row gap-6 md:gap-0 justify-between mb-6">
+            <div className="flex flex-col w-full md:w-auto">
+                <div className="flex justify-between items-center w-full md:w-[300px] mb-2">
                     <label
                         className={`text-[13px] font-bold ${errors.city ? "text-strawberryRed" : "text-black"
                             }`}
@@ -51,12 +52,12 @@ const ShippingInfo = ({ address, city, country, postalCode, errors, onChange }) 
                     value={city}
                     onChange={onChange}
                     className={`${errors.city ? "border-strawberryRed" : "border-greyBorder"
-                        } px-4 rounded-[5px] py-4 border-[1px] w-[300px] text-[14px] placeholder:text-elements placeholder:font-medium font-bold focus:outline-[1px] focus:outline-orange`}
+                        } px-4 rounded-[5px] py-4 border-[1px] w-full md:w-[300px] text-[14px] placeholder:text-elements placeholder:font-medium font-bold focus:outline-[1px] focus:outline-orange`}
                 />
             </div>
 
-            <div className="flex flex-col w-auto">
-                <div className="flex justify-between items-center w-[300px] mb-2">
+            <div className="flex flex-col w-full md:w-auto">
+                <div className="flex justify-between items-center w-full md:w-[300px] mb-2">
                     <label
                         className={`text-[13px] font-bold ${errors.country ? "text-strawberryRed" : "text-black"
                             }`}
@@ -76,13 +77,13 @@ const ShippingInfo = ({ address, city, country, postalCode, errors, onChange }) 
                     value={country}
                     onChange={onChange}
                     className={`${errors.country ? "border-strawberryRed" : "border-greyBorder"
-                        } px-4 rounded-[5px] py-4 border-[1px] w-[300px] text-[14px] placeholder:text-elements placeholder:font-medium font-bold focus:outline-[1px] focus:outline-orange`}
+                        } px-4 rounded-[5px] py-4 border-[1px] w-full md:w-[300px] text-[14px] placeholder:text-elements placeholder:font-medium font-bold focus:outline-[1px] focus:outline-orange`}
                 />
             </div>
             </div>
 
             <div className="flex flex-col w-auto">
-                <div className="flex justify-between items-center w-[300px] mb-2">
+                <div className="flex justify-between items-center w-full md:w-[300px] mb-2">
                     <label
                         className={`text-[13px] font-bold ${errors.postalCode ? "text-strawberryRed" : "text-black"
                             }`}
@@ -102,7 +103,7 @@ const ShippingInfo = ({ address, city, country, postalCode, errors, onChange }) 
                     value={postalCode}
                     onChange={onChange}
                     className={`${errors.postalCode ? "border-strawberryRed" : "border-greyBorder"
-                        } px-4 rounded-[5px] py-4 border-[1px] w-[300px] text-[14px] placeholder:text-elements placeholder:font-medium font-bold focus:outline-[1px] focus:outline-orange`}
+                        } px-4 rounded-[5px] py-4 border-[1px] w-full md:w-[300px] text-[14px] placeholder:text-elements placeholder:font-medium font-bold focus:outline-[1px] focus:outline-orange`}
                 />
             </div>
         </div>

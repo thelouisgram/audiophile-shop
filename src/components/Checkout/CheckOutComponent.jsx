@@ -130,10 +130,10 @@ const CheckOutComponent = ({ items }) => {
 
 
     return (
-        <div className="flex gap-8 w-[1100px] mx-auto ">
-            <div className='bg-white rounded-[10px] flex flex-1 p-10 h-auto'>
+        <div className="flex flex-col md:flex-row gap-8 md:w-[1100px] mx-auto w-full ">
+            <div className='bg-white rounded-[10px] w-full px-3 py-6 xs:p-6 flex md:flex-1 md:p-10 h-auto'>
                 <div>
-                    <h1 className="font-bold text-[28px] mb-8">CHECKOUT</h1>
+                    <h1 className="font-bold text-[20px] xs:text-[28px] mb-8">CHECKOUT</h1>
                     <form onSubmit={handleSubmit} className="flex flex-col w-full">
                         <BillingDetails 
                             formData = {formData}
@@ -158,7 +158,7 @@ const CheckOutComponent = ({ items }) => {
                     </form>
                 </div>
             </div>
-            <div className='w-[500px]'>
+            <div className='w-full md:w-[500px]'>
                 <Summary items={items} handleSubmit={handleSubmit} />
             </div>
         </div>

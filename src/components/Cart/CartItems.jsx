@@ -7,18 +7,18 @@ const CartItems = ({minusCartItem, addCartItem, item}) => {
           <div>
               <img
                   src={item.cartImage}
-                  className="w-[64px] h-auto rounded-[8px] "
+                  className="w-[50px] xs:w-[64px] h-auto rounded-[8px] "
               />
           </div>
           <div className="flex flex-col">
-              <h3 className="font-bold text-black text-[15px]">{item.shortName}</h3>
+              <h3 className="font-bold text-black text-[13px] xs:text-[15px]">{item.shortName}</h3>
               <h4 className="text-elements text-[14px]">$ {item.price.toLocaleString()}</h4>
           </div>
           </div>
-          <div className="bg-grey w-[100px] h-[36px] justify-center items-center flex text-[15px] font-bold gap-3 text-black overflow-hidden">
+          <div className="bg-grey w-[80px] xs:w-[100px] h-[36px] justify-center items-center flex text-[15px] font-bold gap-3 text-black overflow-hidden">
               <button
                   onClick={() => minusCartItem(item.id)}
-                  className="text-elements hover:bg-[#D3D3D3] hover:text-orange px-3 py-3"
+                  className="text-elements hover:bg-[#D3D3D3] hover:text-orange p-2 xs:p-3"
               >
                   -
               </button>
@@ -27,7 +27,7 @@ const CartItems = ({minusCartItem, addCartItem, item}) => {
               </div>
               <button
                   onClick={() => addCartItem(item.id)}
-                  className="text-elements hover:bg-[#D3D3D3] hover:text-orange px-3 py-3"
+                  className="text-elements hover:bg-[#D3D3D3] hover:text-orange p-2 xs:p-3"
               >
                   +
               </button>

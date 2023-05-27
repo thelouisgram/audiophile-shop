@@ -3,7 +3,7 @@ import React from 'react'
 const SingleItem = ({items, currentItems, handleToggleItems
 }) => {
   return (
-      <div className="bg-grey px-4 w-1/2 flex flex-col gap-2 justify-center max-h-[125px]">
+      <div className="bg-grey px-3 xs:px-4 md:w-1/2 flex flex-col gap-2 justify-center h-[100px] xs:h-[125px]">
           {items}
           {currentItems.length > 1 && (
               <p
