@@ -18,22 +18,6 @@ const Cart = () => {
   const dropdownRef = useRef(null);
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   const handleClickOutside = (event) => {
-  //     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-  //       dispatch(toggleCart(false));
-  //     }
-  //   };
-
-  //   // add event listener for clicks outside of dropdown
-  //   document.addEventListener("mousedown", handleClickOutside);
-
-  //   // remove event listener when component unmounts
-  //   return () => {
-  //     document.removeEventListener("mousedown", handleClickOutside);
-  //   };
-  // }, []);
-
   const minusCartItem = (id) => {
     const updatedCartArray = cartArray.map((item) => {
       if (item.id === id) {
@@ -101,10 +85,10 @@ const Cart = () => {
                 <EmptyCart />
               )}
               {cartArray.length > 0 && (
-                <ActiveCart 
-                  cartItems={cartItems} 
-                  cartItemsNumber={cartItemsNumber} 
-                  cartTotal={cartTotal} 
+                <ActiveCart
+                  cartItems={cartItems}
+                  cartItemsNumber={cartItemsNumber}
+                  cartTotal={cartTotal}
                   removeAll={removeAll} />
               )}
             </div>

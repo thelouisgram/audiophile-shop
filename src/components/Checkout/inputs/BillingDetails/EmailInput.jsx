@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const EmailInput = ({ value, error, onChange }) => {
     return (
-        <div className="flex flex-col w-full">
+        <div className="flex flex-col w-full ss:w-1/2 md:w-full">
             <div className="flex justify-between items-center w-full md:w-[300px] mb-2">
                 <label
                     className={`text-[13px] font-bold ${!error ? "text-black" : "text-strawberryRed"

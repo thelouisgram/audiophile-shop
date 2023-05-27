@@ -12,6 +12,7 @@ const Home = () => {
   // Scroll to the top on re-render
   useEffect(() => {
     scrollToTop();
+    document.title = "Audiophile Shop"
   }, []);
 
   return (

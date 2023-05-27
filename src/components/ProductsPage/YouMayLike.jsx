@@ -8,7 +8,7 @@ const YouMayLike = ({others}) => {
                   YOU MAY ALSO LIKE
               </h2>
           </div>
-          <div className="flex flex-col md:flex-row w-full gap-14 md:gap-8">{others}</div>
+          <div className="flex flex-col ss:flex-row w-full gap-14 ss:gap-6 md:gap-8">{others}</div>
       </div>
   )
 }

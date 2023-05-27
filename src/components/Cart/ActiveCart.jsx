@@ -5,14 +5,17 @@ import RemoveAllBtn from './RemoveAllBtn'
 
 const ActiveCart = ({ cartItems, cartItemsNumber, cartTotal, removeAll}) => {
   return (
+    // Parent Container
       <div className='bg-white rounded-[10px] w-full md:w-[375px] h-auto px-4 py-6 xs:p-8'>
           <div className="flex justify-between  items-center mb-6 xs:mb-8">
+            {/* Cart  */}
               <h3 className="font-bold text-black text-[17px]">
                   CART ( {cartItemsNumber} )
               </h3>
+            {/*   REmove all btn  */}
               <RemoveAllBtn removeAll={removeAll} />
           </div>
-          <div className="flex flex-col gap-4 xs:gap-6 mb-6 xs:mb-8 h-auto max-h-[290px] overflow-auto scroll-container">
+          <div className="flex flex-col gap-4 xs:gap-6 mb-6 xs:mb-8 max-h-[290px] ss:h-auto ss:max-h-auto md:max-h-[290px] overflow-auto scroll-container">
               {cartItems}
           </div>
           <div className="flex justify-between items-center mb-6 xs:mb-8">

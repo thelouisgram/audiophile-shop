@@ -36,6 +36,7 @@ const App = () => {
           </Route>
           <Route path="/checkout" element={<Checkout />} />
           <Route path="*" element={<Error />} />
+          <Route path="/not-found" element={<Error />} />
         </Route>
       </Routes>
     </HashRouter>

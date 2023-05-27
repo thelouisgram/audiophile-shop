@@ -9,7 +9,7 @@ const BillingDetails = ({formData, errors, handleChange}) => {
           <h3 className="text-orange text-[14px] font-bold mb-5">
               BILLING DETAILS
           </h3>
-          <div className="w-full flex flex-col md:flex-row gap-6 mb-6">
+          <div className="w-full flex flex-col ss:flex-row gap-6 mb-6">
               <NameInput
                   value={formData.name}
                   error={errors.name}
@@ -21,11 +21,14 @@ const BillingDetails = ({formData, errors, handleChange}) => {
                   onChange={handleChange}
               />
           </div>
+          <div className="w-full flex flex-col ss:flex-row gap-6 mb-6">
           <EmailInput
               value={formData.email}
               error={errors.email}
               onChange={handleChange}
           />
+          <div className='ss:w-1/2' />
+      </div>
       </div>
   )
 }

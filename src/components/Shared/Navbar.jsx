@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleCart, toggleNav } from "../../store/storeSlice";
@@ -11,7 +11,7 @@ const Navbar = () => {
 
   // Function to toggle cart visibility
   const handleCartToggle = () => {
-      dispatch(toggleCart(cart ? false : true))
+    dispatch(toggleCart(cart ? false : true))
   }
 
   // Function to handle mobile navBar
@@ -24,17 +24,20 @@ const Navbar = () => {
   // Listen to location changes and update nav value
   useEffect(() => {
     dispatch(toggleNav(false)); // Set nav to false when navigating to a new page
+    dispatch(toggleCart(false)); // Set cart to false when navigating to a new page
   }, [dispatch, location]);
 
 
   return (
+    // Parent container
     <div className="bg-black w-full relative h-[84px]">
       <header
         className="md:w-[1100px] z-[10] w-full text-white absolute md:relative
         h-full md:mx-auto flex items-center justify-between px-4 xs:px-6 md:p-0"
       >
+        {/* Menu container */}
         <div onClick={handleNav} className="flex md:hidden">
-          {!nav ? <img src='/images/shared/tablet/icon-hamburger.svg' className="flex md:hidden"/> :
+          {!nav ? <img src='/images/shared/tablet/icon-hamburger.svg' className="flex md:hidden" /> :
             <img src='/images/shared/tablet/icon-close-menu.svg' className="flex md:hidden" />}
         </div>
         <Link to="/">
@@ -42,6 +45,7 @@ const Navbar = () => {
             <img src="/images/shared/desktop/logo.svg" />
           </div>
         </Link>
+        {/* Nav Links */}
         <div className="hidden md:flex gap-8 text-white tracking-[0.15rem] font-bold text-[13px] ">
           <NavLink
             to="/"
@@ -80,9 +84,10 @@ const Navbar = () => {
             EARPHONES
           </NavLink>
         </div>
+        {/* Cart */}
         <div onClick={handleCartToggle} className="cursor-pointer relative h-full w-[40px] flex items-center">
           {cartItemsNumber > 0 && <div className="text-white bg-orange  text-[12px] w-[22px] h-[22px] rounded-full absolute top-[20px] justify-center
-            flex items-center right-[4px]">{cartItemsNumber}</div> }
+            flex items-center right-[4px]">{cartItemsNumber}</div>}
           <img src="/images/shared/desktop/icon-cart.svg" />
         </div>
       </header>
