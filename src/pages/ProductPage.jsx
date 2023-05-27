@@ -22,6 +22,18 @@ const ProductPage = () => {
   const product = productData.products.find((item) => item.slug === code);
 
   /**
+   * Scroll to top on component mount
+   */
+  useEffect(() => {
+    scrollToTop();
+    setItemNumber(1);
+  }, []);
+
+  useEffect(() => {
+    scrollToTop();
+  }, [code]);
+
+  /**
    * Check if product exists
    * If not, navigate to error page
    */
@@ -54,13 +66,6 @@ const ProductPage = () => {
     }
   }, [itemNumber]);
 
-  /**
-   * Scroll to top on component mount
-   */
-  useEffect(() => {
-    scrollToTop();
-    setItemNumber(1);
-  }, []);
 
   /**
    * Render included items
