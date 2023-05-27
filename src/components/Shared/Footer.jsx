@@ -6,8 +6,8 @@ const Footer = () => {
     <div className='w-full h-auto bg-black text-white'>
       <footer className='md:w-[1100px] px-6 xs:px-6 md:px-0 mx-auto flex flex-col items-center md:items-start gap-12  pb-10 '>
         <div className='h-1 w-24 mb-8 bg-orange '/>
-        <div className=' flex flex-col md:flex-row w-full  gap-14 justify-between'>
-                  <div className='flex items-center'>
+        <div className=' flex flex-col md:flex-row w-full gap-14 justify-between'>
+                  <div className='flex w-full justify-center md:justify-start md:items-center'>
                     <img src='/images/shared/desktop/logo.svg' />
                   </div>
                   <div className='flex flex-col md:flex-row text-center md:text-left gap-6 text-white tracking-[0.15rem] font-bold text-[13px]'>
