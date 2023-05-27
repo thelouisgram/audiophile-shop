@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom'
 
 const Zx7Speaker = () => {
   return (
-      <div className="w-full px-4 xs:px-6 md:px-0 bg-whitishGrey mb-6 md:mb-12">
-          <section className="py-24 h-auto md:w-[1100px] rounded-[10px] mx-auto zx7">
+    // Parent container
+      <div className="w-full px-4 xs:px-6 md:px-0 mb-6 ss:mb-8 md:mb-12">
+          <section className="py-24 ss:py-32 h-auto md:w-[1100px] rounded-[10px] mx-auto zx7">
               <div className="pl-6 md:pl-24">
                   <h3 className="text-[20px] xs:text-[28px] text-black font-bold  mb-3 md:mb-6">
                       ZX7 SPEAKER

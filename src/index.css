@@ -18,6 +18,16 @@
   background-position: cover;
 }
 
+@media (max-width: 1060px) {
+  .zx7 {
+    background-image: url('/public/images/home/tablet/image-speaker-zx7.jpg');
+    background-position: right;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 @media (max-width: 675px) {
   .zx7 {
     background-image: url('/public/images/home/mobile/image-speaker-zx7.jpg');

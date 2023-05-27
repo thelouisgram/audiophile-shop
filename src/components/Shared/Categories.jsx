@@ -4,8 +4,11 @@ import { Link } from "react-router-dom"
 
 const Categories = () => {
     return (
-            <section className="flex py-10 md:py-24 w-full md:w-[1100px] px-4 xs:px-6 md:px-0 mx-auto">
-                <div className="w-full flex flex-col md:flex-row flex-wrap justify-between gap-16 md:gap-8">
+        // Shop categories component
+            <section className="flex py-10 ss:py-16 md:py-24 w-full md:w-[1100px] px-4 xs:px-6 md:px-0 mx-auto">
+                {/* Parent container */}
+                <div className="w-full flex flex-col ss:flex-row flex-wrap justify-between ss:gap-4 gap-16 md:gap-8">
+                    {/* Headphones container */}
                     <Link to='/headphones' className=" text-elements flex flex-col p-1 border-transparent border-2 
                     focus:outline-none focus:border-dashed focus:border-2 focus:border-brightOrange
                      items-center relative h-[180px] flex-1 pt-[100px] bg-grey rounded-[10px] cursor-pointer hover:text-orange">
@@ -25,6 +28,7 @@ const Categories = () => {
                             <img src="/images/shared/desktop/icon-arrow-right.svg" />
                         </div>
                     </Link>
+                    {/* Speaker container */}
                     <Link to='/speakers' className=" text-elements flex flex-col p-1 border-transparent border-2 
                     focus:outline-none focus:border-dashed focus:border-2 focus:border-brightOrange
                      items-center relative h-[180px] flex-1 pt-[100px] bg-grey rounded-[10px] cursor-pointer hover:text-orange">
@@ -44,6 +48,7 @@ const Categories = () => {
                             <img src="/images/shared/desktop/icon-arrow-right.svg" />
                         </div>
                     </Link>
+                    {/* Earphones container */}
                     <Link to='/earphones' className=" text-elements flex flex-col p-1 border-transparent border-2 
                     focus:outline-none focus:border-dashed focus:border-2 focus:border-brightOrange
                      items-center relative h-[180px] flex-1 pt-[100px] bg-grey rounded-[10px] cursor-pointer hover:text-orange">
