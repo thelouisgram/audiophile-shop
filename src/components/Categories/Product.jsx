@@ -5,7 +5,7 @@ import OrangeSeeProduct from '../Buttons/OrangeSeeProduct';
 const Product = ({ item, index }) => {
   return (
     <div
-      className={`w-full flex gap-8 flex-col items-center ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+      className={`w-full flex gap-12 md:gap-8 flex-col items-center ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
         }`}
     >
       <div className="md:w-1/2">

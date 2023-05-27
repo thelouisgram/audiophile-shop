@@ -87,10 +87,10 @@ const ProductPage = () => {
   });
 
   return (
-      <section className=" h-auto pt-20 w-[1100px] mx-auto">
+    <section className=" h-auto pt-6 md:pt-20 px-4 xs:px-6 md:px-0 w-full md:w-[1100px] mx-auto">
         {/* Go Back Button */}
         <div
-          className="text-elements mb-16 cursor-pointer hover:underline w-[100px]"
+          className="text-elements mb-8 md:mb-16 cursor-pointer hover:underline w-[100px]"
           onClick={goBack}
         >
           Go Back

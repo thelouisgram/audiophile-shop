@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Yx1Earphones = () => {
   return (
-          <section className="h-auto w-full md:w-[1100px] px-4 xs:px-6 md:px-0 mb-20 md:mb-40 mx-auto earphones">
+          <section className="h-auto w-full md:w-[1100px] px-4 xs:px-6 md:px-0 mx-auto earphones">
               <div className="flex flex-col w-full md:justify-between md:flex-row gap-6 md:gap-8 md:h-[300px]">
                   <div className="md:w-1/2 h-full">
                       <img

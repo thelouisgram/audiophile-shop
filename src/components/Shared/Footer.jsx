@@ -6,7 +6,7 @@ const Footer = () => {
     <div className='w-full h-auto bg-black text-white'>
       <footer className='md:w-[1100px] px-6 xs:px-6 md:px-0 mx-auto flex flex-col items-center md:items-start gap-12  pb-10 '>
         <div className='h-1 w-24 mb-8 bg-orange '/>
-        <div className=' flex flex-col md:flex-row gap-10 justify-between'>
+        <div className=' flex flex-col md:flex-row gap-14 justify-between'>
                   <div className='flex items-center'>
                     <img src='/images/shared/desktop/logo.svg' />
                   </div>
@@ -26,7 +26,7 @@ const Footer = () => {
             </p>
             </div>
         </div>
-        <div className='flex flex-col md:flex-row justify-between gap-10 items-center'>
+        <div className='flex flex-col md:flex-row justify-between gap-14 items-center'>
                   <p className='text-elements'>Copyright 2021. All Rights Reserved</p>
             <div className='flex flex-row gap-4 items-center'>
                 <img src='/images/shared/desktop/icon-facebook.svg' />

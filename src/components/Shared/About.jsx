@@ -2,7 +2,7 @@ import React from "react"
 
 const About = () => {
   return (
-      <div className='md:w-[1100px] mb-20 md:mb-40 px-4 xs:px-6 md:px-0 flex flex-col-reverse md:flex-row items-center gap-8 
+      <div className='md:w-[1100px] my-28 md:my-40 px-4 xs:px-6 md:px-0 flex flex-col-reverse md:flex-row items-center gap-8 
       mx-auto'>
         <div className='md:w-1/2 text-center md:text-left'>
           <h2 className='text-black font-bold text-[24px] md:text-[40px] mb-6 md:mb-8 wide-[0.3rem]'>BRINGING YOU THE <span className='text-orange'>BEST</span> AUDIO GEAR</h2>
