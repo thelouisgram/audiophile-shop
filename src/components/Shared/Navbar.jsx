@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     // Parent container
-    <div className="bg-black w-full relative h-[84px]">
+    <div className="bg-black w-full relative h-[84px] z-[10]">
       <header
         className="md:w-[1100px] z-[10] w-full text-white absolute md:relative
         h-full md:mx-auto flex items-center justify-between px-4 xs:px-6 md:p-0"

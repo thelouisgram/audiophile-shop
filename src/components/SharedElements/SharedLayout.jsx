@@ -9,7 +9,7 @@ import Notif from "../Shared/Notif"
 import MobileNav from "../Shared/MobileNav"
 
 const SharedLayout = () => {
-  const { cart, thankYou, nav } = useSelector((state) => state.app);
+  const { cart, thankYou } = useSelector((state) => state.app);
   const layoutClasses = cart || thankYou ? 'max-h-[100vh] overflow-hidden' : '';
 
   return (
@@ -17,7 +17,7 @@ const SharedLayout = () => {
       <Notif />
       <Cart />
       <ThankYou />
-      {nav && <MobileNav />}
+      <MobileNav />
       <Navbar />
       <Outlet />
       <Footer />

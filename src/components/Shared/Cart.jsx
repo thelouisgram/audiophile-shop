@@ -5,18 +5,34 @@ import {
   updateCartItemsNumber,
   updateCartTotal,
   updateCart,
-  updateNotifMessage
+  updateNotifMessage,
 } from "../../store/storeSlice";
 import CartItems from "../Cart/CartItems";
 import EmptyCart from "../Cart/EmptyCart";
 import ActiveCart from "../Cart/ActiveCart";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Cart = () => {
-  const { cart, cartArray, cartTotal, cartItemsNumber, notifMessage } = useSelector(
-    (state) => state.app
-  );
+  const { cart, cartArray, cartTotal, cartItemsNumber, notifMessage } =
+    useSelector((state) => state.app);
   const dropdownRef = useRef(null);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        dispatch(toggleCart(false));
+      }
+    };
+
+    // add event listener for clicks outside of dropdown
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // remove event listener when component unmounts
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const minusCartItem = (id) => {
     const updatedCartArray = cartArray.map((item) => {
@@ -44,7 +60,7 @@ const Cart = () => {
 
   const removeAll = () => {
     dispatch(updateCart([]));
-    dispatch(updateNotifMessage([...notifMessage, "Cart is empty"]))
+    dispatch(updateNotifMessage([...notifMessage, "Cart is empty"]));
   };
 
   useEffect(() => {
@@ -67,34 +83,52 @@ const Cart = () => {
   const cartItems = cartArray.map((item, index) => {
     return (
       <div key={index}>
-        <CartItems minusCartItem={minusCartItem} addCartItem={addCartItem} item={item} />
+        <CartItems
+          minusCartItem={minusCartItem}
+          addCartItem={addCartItem}
+          item={item}
+        />
       </div>
     );
   });
 
   return (
     <div>
-      {cart && (
-        <div className="fixed h-[100vh] z-[5] w-full bg-blackII">
-          <div className="md:w-[1100px] w-full  relative mx-auto h-full ">
-            <div
+      <div className="md:w-[1100px] w-full  relative mx-auto h-full ">
+        <AnimatePresence>
+          {cart && (
+            <motion.div
+              initial={{ x: 400, opacity:0 }}
+              animate={{ x: 0, opacity: 1}}
+              exit={{ x: 400, opacity: 0 }}
+              transition={{ ease: "easeInOut", duration: 1 }}
               ref={dropdownRef}
-              className={`h-auto w-full flex absolute px-3 xs:px-6 md:px-0 top-[94px] md:justify-end right-0 z-[6]`}
+              className={`h-auto w-full flex absolute px-4 xs:px-6 md:px-0 top-[94px] md:justify-end right-0 z-[12]`}
             >
-              {cartArray.length < 1 && (
-                <EmptyCart />
-              )}
+              {cartArray.length < 1 && <EmptyCart />}
               {cartArray.length > 0 && (
                 <ActiveCart
                   cartItems={cartItems}
                   cartItemsNumber={cartItemsNumber}
                   cartTotal={cartTotal}
-                  removeAll={removeAll} />
+                  removeAll={removeAll}
+                />
               )}
-            </div>
-          </div>
-        </div>
-      )}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+      <AnimatePresence>
+        {cart && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ ease: "easeInOut", duration: 0.5 }}
+            className={` w-full h-[100vh] fixed bg-blackII z-[11]`}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 };
