@@ -9,7 +9,7 @@ const Footer = () => {
         {/* Orange Accent */}
         <div className="h-1 w-24 mb-8 bg-orange " />
         {/* Top Half container */}
-        <div className=" flex flex-col ss:flex-row w-full gap-14 justify-between">
+        <div className=" flex flex-col md:flex-row w-full gap-14 justify-between">
           {/* Logo Container */}
           <div className="flex w-full justify-center ss:justify-start ss:items-center">
             <img src="/images/shared/desktop/logo.svg" />

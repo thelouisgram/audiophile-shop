@@ -123,7 +123,7 @@ const Cart = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            exit={{ opacity: 0.9 }}
             transition={{ ease: "easeInOut", duration: 0.5 }}
             className={` w-full h-[100vh] fixed bg-blackII z-[11]`}
           />

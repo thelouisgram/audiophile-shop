@@ -22,7 +22,7 @@ const HeroSection = () => {
                         XX99 MARK II <br />
                         HEADPHONES
                     </h1>
-                    <p className="ss:w-[350px] ss:mx-auto md:mx-0 text-elements text-[14px] xs:text-[15px] mb-[40px]">
+                    <p className="ss:w-[350px] ss:mx-auto md:mx-0 text-elements text-[14px] xs:text-[15px] mb-[50px]">
                         Experience natural, lifelike audio and exceptional build quality
                         made for the passionate music enthusiast.
                     </p>
@@ -37,8 +37,8 @@ const HeroSection = () => {
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ ease: "easeInOut", duration: 4 }}
-                     className="absolute w-full md:w-auto h-[700px] mt-[-90px] z-[0]">
+                        transition={{ ease: "easeInOut", duration: 2 }}
+                     className="absolute w-full md:w-auto h-[700px] ss:mt-[-90px] z-[0]">
                     <img
                         src="/images/home/desktop/image-hero.png"
                         className="w-auto h-full object-cover hidden md:flex"

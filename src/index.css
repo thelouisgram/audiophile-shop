@@ -9,13 +9,15 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.speaker{
-    background-image: url('/public/images/home/desktop/pattern-circles.svg');
-    background-position: left;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
+.speaker {
+  background-image: url('/public/images/home/desktop/pattern-circles.svg');
+  background-position: -250px -150px;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
 }
+
 .zx7 {
   background-image: url('/public/images/home/desktop/image-speaker-zx7.jpg');
   background-position: center;
@@ -32,6 +34,14 @@
     width: 100%;
     height: 100%;
   }
+  .speaker {
+  background-image: url('/public/images/home/desktop/pattern-circles.svg');
+  background-position: -0px -175px;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
 }
 
 @media (max-width: 675px) {
@@ -42,6 +52,15 @@
     width: 100%;
     height: 100%;
   }
+  .speaker {
+  background-image: url('/public/images/home/desktop/pattern-circles.svg');
+  background-position: -100px -110px;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+  
 }
 
 
