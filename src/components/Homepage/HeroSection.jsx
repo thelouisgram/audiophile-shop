@@ -18,7 +18,7 @@ const HeroSection = () => {
                     <h4 className="tracking-[0.8em] text-elements text-[14px] mb-4 md:mb-0 font-bold">
                         NEW PRODUCT
                     </h4>
-                    <h1 className="text-[36px] xs:text-[50px] md:text-[56px] text-white font-bold leading-[1.1em] mb-10">
+                    <h1 className="text-[36px] xs:text-[44px] md:text-[56px] text-white font-bold leading-[1.1em] mb-6 ss:mb-10">
                         XX99 MARK II <br />
                         HEADPHONES
                     </h1>
