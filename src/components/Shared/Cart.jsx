@@ -101,7 +101,7 @@ const Cart = () => {
               initial={{ x: 400, opacity:0 }}
               animate={{ x: 0, opacity: 1}}
               exit={{ x: 400, opacity: 0 }}
-              transition={{ ease: "easeInOut", duration: 1 }}
+              transition={{ ease: "easeInOut", duration: 0.5 }}
               ref={dropdownRef}
               className={`h-auto w-full flex absolute px-4 xs:px-6 md:px-0 top-[94px] md:justify-end right-0 z-[12]`}
             >
@@ -124,7 +124,7 @@ const Cart = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ ease: "easeInOut", duration: 0.5 }}
+            transition={{ ease: "easeInOut", duration: 0.2 }}
             className={` w-full h-[100vh] fixed bg-blackII z-[11]`}
           />
         )}

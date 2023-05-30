@@ -13,7 +13,7 @@ const MobileNav = () => {
           initial={{ y: -800 }}
           animate={{ y: 0 }}
           exit={{ y: -800 }}
-          transition={{ ease: "easeInOut", duration: 1 }} 
+          transition={{ ease: "easeInOut", duration: 0.5 }} 
           className='min-h-screen-16 top-[84px] rounded-b-[10px] absolute w-full bg-white py-5 z-[8] '>
       <Categories />
         </motion.div>}
@@ -24,7 +24,7 @@ const MobileNav = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ ease: "easeInOut", duration: 0.5 }}
+          transition={{ ease: "easeInOut", duration: 0.2 }}
         className={` w-full h-[100vh] fixed bg-blackII z-[7]`}/>}
       </AnimatePresence>
     </div>

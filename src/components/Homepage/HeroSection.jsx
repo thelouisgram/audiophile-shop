@@ -13,7 +13,7 @@ const HeroSection = () => {
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ ease: "easeInOut", duration: 3 }} 
+                        transition={{ ease: "easeInOut", duration: 1.5 }} 
                         className="z-[1] flex h-full w-full justify-center md:items-start p-4 xs:p-6 md:p-0 flex-col">
                     <h4 className="tracking-[0.8em] text-elements text-[14px] mb-4 md:mb-0 font-bold">
                         NEW PRODUCT
@@ -37,7 +37,7 @@ const HeroSection = () => {
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        transition={{ ease: "easeInOut", duration: 2 }}
+                        transition={{ ease: "easeInOut", duration: 1 }}
                      className="absolute w-full md:w-auto h-[700px] ss:mt-[-90px] z-[0]">
                     <img
                         src="/images/home/desktop/image-hero.png"
