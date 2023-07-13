@@ -26,7 +26,8 @@ export default {
       },
       height:{
         "screen-16" : "calc(100vh - 84px)",
-        "screen-78" : "calc(100vh - 449px)"
+        "screen-78" : "calc(100vh - 449px)",
+        "screen-98" : "calc(100vh - 377px)"
       }
     },
     screens: {

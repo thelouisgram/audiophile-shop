@@ -8,7 +8,7 @@ const Error = () => {
   }, []);
 
   return (
-    <div className="h-screen-78 w-full md:w-[1100px] mx-auto pt-4 md:pt-0 ss:py-12">
+    <div className="h-screen-78 md:h-screen-98 w-full md:w-[1100px] mx-auto pt-4 ss:py-12">
       <Error404 />
     </div>
   );
