@@ -11,19 +11,23 @@ const Product = ({ item, index }) => {
       }`}
     >
       {/* Image container */}
-      <div className="md:w-1/2">
-        <div className="default-container rounded-[10px]">
+      <div className="md:w-1/2 w-full">
           {/* Desktop image */}
+        <div className="default-container rounded-[10px] hidden md:flex">
           <img
             src={item.categoryImage.desktop}
             className="rounded-[10px] hidden md:flex"
           />
+          </div>
           {/* Tablet image */}
+        <div className="ss-container rounded-[10px] hidden ss:flex md:hidden">
           <img
             src={item.categoryImage.tablet}
-            className="rounded-[10px] hidden ss:flex md:hidden"
+            className="rounded-[10px]"
           />
-          {/* Mobile image */}
+          </div>
+        {/* Mobile image */}
+          <div className="default-container rounded-[10px] flex ss:hidden">
           <img
             src={item.categoryImage.mobile}
             className="rounded-[10px] flex ss:hidden"

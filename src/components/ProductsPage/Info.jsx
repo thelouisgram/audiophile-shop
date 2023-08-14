@@ -13,21 +13,25 @@ const Info = ({
     <div className="flex flex-col ss:flex-row items-center gap-8 md:gap-24 mb-20 md:mb-40 w-full ">
       {/* Image container */}
       <div className="md:w-1/2 w-full">
-        <div className="default-container rounded-[10px]">
           {/* Desktop image */}
+        <div className="default-container rounded-[10px] hidden md:flex">
           <img
             src={product.image.desktop}
-            className="rounded-[10px] hidden md:flex"
+            className="rounded-[10px] "
           />
+        </div>
           {/* Tablet image */}
+        <div className="info-container rounded-[10px] hidden ss:flex md:hidden">
           <img
             src={product.image.tablet}
-            className="rounded-[10px] hidden ss:flex md:hidden"
+            className="rounded-[10px]"
           />
+          </div>
           {/* Mobile image */}
+        <div className="default-container rounded-[10px] flex ss:hidden">
           <img
             src={product.image.mobile}
-            className="rounded-[10px] flex ss:hidden"
+            className="rounded-[10px] "
           />
         </div>
       </div>

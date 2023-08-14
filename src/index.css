@@ -88,3 +88,15 @@
   aspect-ratio: 1/1;
   background-color: #f1f1f1;
 }
+
+.ss-container{
+  width: full;
+  aspect-ratio: 1/0.5108709016;
+  background-color: #f1f1f1;
+}
+
+.info-container{
+  width: full;
+  aspect-ratio: 290/495.36;
+  background-color: #f1f1f1;
+}
