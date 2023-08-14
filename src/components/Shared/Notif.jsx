@@ -43,16 +43,18 @@ const Notif = () => {
                         transition={{ duration: 0.5 }}
                         className="bg-green p-3 w-full rounded-[5px] flex gap-2 justify-between"
                     >
-                        <div className="h-full flex items-center gap-2">
+                        <div className="h-full flex gap-1">
+                            <div className="flex items-center h-full gap-2">
                             <i className="fa-solid fa-circle-check text-white text-[16px] ss:text-[18px]"></i>
-                            <h2 className="text-white text-[10px] xs:text-[14px] md:text-[16px] font-bold mr-4">
+                            <h2 className="text-white text-[10px] xs:text-[12px] md:text-[16px] font-bold mr-4">
                                 {item}
                             </h2>
+                            </div>
                             <div
                                 className="flex items-start h-full cursor-pointer"
                                 onClick={() => handleDelete(index)}
                             >
-                                <i className="fa-solid fa-xmark text-[14px] text-white"></i>
+                                <i className="fa-solid fa-xmark text-[12px] text-white"></i>
                             </div>
                         </div>
                     </motion.div>

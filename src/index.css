@@ -82,3 +82,9 @@
 .scroll-container:hover::-webkit-scrollbar-thumb {
   background-color: #555;
 }
+
+.default-container{
+  width: full;
+  aspect-ratio: 1/1;
+  background-color: #f1f1f1;
+}
