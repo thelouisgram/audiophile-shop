@@ -25,9 +25,9 @@ export default {
         Manrope : ['Manrope', 'sans-serif'],
       },
       height:{
-        "screen-16" : "calc(100vh - 84px)",
-        "screen-78" : "calc(100vh - 449px)",
-        "screen-98" : "calc(100vh - 377px)"
+        "screen-16" : "calc(100dvh - 84px)",
+        "screen-78" : "calc(100dvh - 449px)",
+        "screen-98" : "calc(100dvh - 377px)"
       }
     },
     screens: {

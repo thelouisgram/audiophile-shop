@@ -9,7 +9,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import BillingDetails from "./inputs/BillingDetails/BillingDetails";
 import PaymentMethod from "./PaymentMethod";
-import { scrollToTop } from "../Utils/Shared";
+import { scrollToTop } from "../../Utils/Shared";
 
 const CheckOutComponent = ({ items }) => {
   const dispatch = useDispatch();

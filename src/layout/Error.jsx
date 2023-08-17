@@ -1,10 +1,11 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect } from "react";
-import Error404 from "../components/Error/404";
+import Error404 from "../pages/Error/404";
+import { handlePageRender } from "../Utils/Shared";
 
 const Error = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-    document.title = "Audiophile Shop - Page Not Found"
+    handlePageRender(' - Page Not Found')
   }, []);
 
   return (

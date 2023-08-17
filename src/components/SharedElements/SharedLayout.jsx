@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom"
 import Navbar from "../Shared/Navbar"
 import Footer from "../Shared/Footer"
+// eslint-disable-next-line no-unused-vars
 import React from "react"
 import Cart from '../Shared/Cart'
 import ThankYou from "../Shared/ThankYou"

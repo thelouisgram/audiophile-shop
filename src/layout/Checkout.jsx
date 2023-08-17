@@ -1,8 +1,10 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleCart } from "../store/storeSlice";
-import CheckOutComponent from "../components/Checkout/CheckOutComponent";
-import CheckOutItems from "../components/Checkout/CheckOutItems";
+import CheckOutComponent from "../pages/Checkout/CheckOutComponent";
+import CheckOutItems from "../pages/Checkout/CheckOutItems";
+import { handlePageRender, goBack } from "../Utils/Shared";
 
 const Checkout = () => {
   const dispatch = useDispatch();
@@ -12,13 +14,8 @@ const Checkout = () => {
   // Turn cart off on render
   useEffect(() => {
     dispatch(toggleCart(false));
-    document.title = `Audiophile Shop - Checkout`
-  }, []);
-
-  // Go back a page
-  const goBack = () => {
-    window.history.back();
-  };
+    handlePageRender('- Checkout')
+  }, [dispatch]);
 
   // Map through cartArray and render cart items
   const cartItems = cartArray.map((item, index) => {

@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -11,7 +12,7 @@ const Error404 = () => {
       >
         Go Back
       </Link>
-      <div className="w-full h-full flex items-center justify-center md:py-12">
+      <div className="w-full h-full flex items-center justify-center md:py-12 ">
         <div className="flex h-full justify-center flex-col md:flex-row gap-4 md:gap-8 items-center">
           <h2 className="text-black font-bold text-[28px]">404</h2>
           <div className="w-[1px] h-[50px] bg-elements hidden md:flex" />

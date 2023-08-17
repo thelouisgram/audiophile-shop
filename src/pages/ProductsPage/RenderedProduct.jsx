@@ -1,75 +1,42 @@
-import React, { useEffect, useState, useCallback } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import productData from "../../public/products.json";
-import { updateCart, updateNotifMessage } from "../store/storeSlice";
+// eslint-disable-next-line no-unused-vars
+import React from "react";
+import { useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { scrollToTop, goBack } from "../components/Utils/Shared";
-import Others from "../components/ProductsPage/Others";
-import YouMayLike from "../components/ProductsPage/YouMayLike";
-import Gallery from "../components/ProductsPage/Gallery";
-import Features from "../components/ProductsPage/Features";
-import Info from "../components/ProductsPage/Info";
+import { updateCart, updateNotifMessage } from "../../store/storeSlice";
+import { goBack } from "../../Utils/Shared";
+import Others from "./Others";
+import Info from "./Info";
+import Gallery from "./Gallery";
+import YouMayLike from "./YouMayLike";
+import Features from "./Features";
 
-/**
- * Product Page component
- */
-const ProductPage = () => {
-  const [itemNumber, setItemNumber] = useState(1);
+// eslint-disable-next-line react/prop-types
+const RenderedProduct = ({ product, itemNumber, setItemNumber }) => {
   const dispatch = useDispatch();
   const { cartArray, notifMessage } = useSelector((state) => state.app);
-  const navigate = useNavigate();
-  const { code } = useParams();
-  const product = productData.products.find((item) => item.slug === code);
-
-  /**
-   * Scroll to top on component mount
-   */
-  useEffect(() => {
-    scrollToTop();
-    setItemNumber(1);
-  }, []);
-
-  useEffect(() => {
-    scrollToTop();
-  }, [code]);
-
-  /**
-   * Check if product exists
-   * If not, navigate to error page
-   */
-  useEffect(() => {
-    if (!product) {
-      navigate("/not-found");
-    }
-  }, [code, navigate, product]);
-
-  /**
-   * Render the component
-   */
-  if (!product) {
-    return null;
-  }
 
   /**
    * Increase item number
    */
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const addItemNumber = useCallback(() => {
     setItemNumber((item) => item + 1);
-  }, []);
+  }, [setItemNumber]);
 
   /**
    * Decrease item number
    */
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const minusItemNumber = useCallback(() => {
     if (itemNumber > 1) {
       setItemNumber((item) => item - 1);
     }
-  }, [itemNumber]);
-
+  }, [itemNumber, setItemNumber]);
 
   /**
    * Render included items
    */
+  // eslint-disable-next-line react/prop-types
   const includedItems = product?.includedItems.map((item, index) => (
     <div key={index} className="flex gap-3">
       <h4 className="text-[15px] font-bold text-orange">{item.quantity}x</h4>
@@ -85,13 +52,16 @@ const ProductPage = () => {
     dispatch(
       updateNotifMessage([
         ...notifMessage,
+        // eslint-disable-next-line react/prop-types
         `Item "${product.name}" has been added to cart`,
       ])
     );
+    // eslint-disable-next-line react/prop-types
     if (cartArray.some((item) => item.id === product.id)) {
       dispatch(
         updateCart(
           cartArray.map((item) => {
+            // eslint-disable-next-line react/prop-types
             if (item.id === product.id) {
               const total = item.price * item.number;
               return {
@@ -105,6 +75,7 @@ const ProductPage = () => {
         )
       );
     } else {
+      // eslint-disable-next-line react/prop-types
       const total = product.price * itemNumber;
       const newObject = { number: itemNumber, total: total };
       const updatedProduct = { ...product, ...newObject };
@@ -115,20 +86,15 @@ const ProductPage = () => {
   /**
    * Render others in the "You may like" section
    */
+  // eslint-disable-next-line react/prop-types
   const others = product?.others.map((item, index) => (
     <div key={index}>
       <Others item={item} />
     </div>
   ));
 
-  useEffect(() => {
-    document.title = `Audiophile Shop - ${product.name}`
-  })
-
-  
-
   return (
-    <section className="h-auto pt-6 md:pt-20 px-4 xs:px-6 md:px-0 w-full md:w-[1100px] mx-auto">
+    <div>
       {/* Go Back Button */}
       <div
         className="text-elements mb-8 md:mb-16 cursor-pointer hover:underline w-[100px]"
@@ -150,8 +116,8 @@ const ProductPage = () => {
       <Gallery product={product} />
       {/* You may like section  */}
       <YouMayLike others={others} />
-    </section>
+    </div>
   );
 };
 
-export default ProductPage;
+export default RenderedProduct;

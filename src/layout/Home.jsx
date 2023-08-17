@@ -1,17 +1,17 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect } from "react";
 import Categories from "../components/Shared/Categories";
-import { scrollToTop } from "../components/Utils/Shared";
+import { handlePageRender } from "../Utils/Shared";
 import RevealDiv from "../components/RevealDiv";
-import HeroSection from "../components/Homepage/HeroSection";
-import Zx9Speaker from "../components/Homepage/Zx9Speaker";
-import Zx7Speaker from "../components/Homepage/Zx7Speaker";
-import Yx1Earphones from "../components/Homepage/Yx1Earphones";
+import HeroSection from "../pages/Homepage/HeroSection";
+import Zx9Speaker from "../pages/Homepage/Zx9Speaker";
+import Zx7Speaker from "../pages/Homepage/Zx7Speaker";
+import Yx1Earphones from "../pages/Homepage/Yx1Earphones";
 
 const Home = () => {
   // Scroll to the top on re-render
   useEffect(() => {
-    scrollToTop();
-    document.title = "Audiophile Shop";
+    handlePageRender('')
   }, []);
 
   return (

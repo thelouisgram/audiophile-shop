@@ -1,5 +1,5 @@
 import React from 'react'
-import OrangeSeeProduct from '../Buttons/OrangeSeeProduct'
+import OrangeSeeProduct from '../../components/Buttons/OrangeSeeProduct'
 import { Link } from 'react-router-dom'
 
 const Others = ({ item }) => {
