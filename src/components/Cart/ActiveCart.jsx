@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 import { Link } from 'react-router-dom'
 import CheckOutBtn from './CheckOutBtn'
@@ -12,7 +14,7 @@ const ActiveCart = ({ cartItems, cartItemsNumber, cartTotal, removeAll}) => {
               <h3 className="font-bold text-black text-[17px]">
                   CART ( {cartItemsNumber} )
               </h3>
-            {/*   REmove all btn  */}
+            {/*   Remove all btn  */}
               <RemoveAllBtn removeAll={removeAll} />
           </div>
           <div className="flex flex-col gap-4 xs:gap-6 mb-6 xs:mb-8 max-h-[290px] ss:h-auto ss:max-h-auto md:max-h-[290px] overflow-auto scroll-container">

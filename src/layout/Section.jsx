@@ -3,7 +3,7 @@ import React from 'react'
 import productData from "../../public/products.json";
 import { useEffect } from "react";
 import { handlePageRender } from "../Utils/Shared";
-import Product from "../pages/Categories/Product";
+import Product from "../pages/Section/Product";
 
 // eslint-disable-next-line react/prop-types
 const Section = ({ section }) => {

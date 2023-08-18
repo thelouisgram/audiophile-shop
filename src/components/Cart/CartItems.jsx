@@ -1,13 +1,15 @@
+/* eslint-disable react/prop-types */
+// eslint-disable-next-line no-unused-vars
 import React from 'react'
 
 const CartItems = ({minusCartItem, addCartItem, item}) => {
   return (
       <div className="flex items-center pr-1 justify-between w-full">
           <div className='flex gap-2 items-center'>
-          <div>
+              <div className='w-[50px] xs:w-[64px] h-auto rounded-[8px] bg-[#f1f1f1]'>
               <img
                   src={item.cartImage}
-                  className="w-[50px] xs:w-[64px] h-auto rounded-[8px] "
+                  className="w-full h-full"
               />
           </div>
           <div className="flex flex-col">

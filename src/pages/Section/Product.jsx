@@ -8,38 +8,36 @@ const Product = ({ item, index }) => {
   return (
     // Parent container
     <div
-      className={`w-full flex gap-12 md:gap-8 flex-col items-center ${
-        index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-      }`}
+      className={`w-full flex gap-12 md:gap-8 flex-col items-center ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+        }`}
     >
       {/* Image container */}
       <div className="md:w-1/2 w-full">
-          {/* Desktop image */}
+        {/* Desktop image */}
         <div className="default-container rounded-[10px] hidden md:flex">
           <img
             src={item.categoryImage.desktop}
-            className="rounded-[10px] hidden md:flex"
+            className="rounded-[10px] animate-fade-in"
           />
-          </div>
-          {/* Tablet image */}
+        </div>
+        {/* Tablet image */}
         <div className="ss-container rounded-[10px] hidden ss:flex md:hidden">
           <img
             src={item.categoryImage.tablet}
-            className="rounded-[10px]"
+            className="rounded-[10px] animate-fade-in"
           />
-          </div>
+        </div>
         {/* Mobile image */}
-          <div className="default-container rounded-[10px] flex ss:hidden">
+        <div className="default-container rounded-[10px] flex ss:hidden">
           <img
             src={item.categoryImage.mobile}
-            className="rounded-[10px] flex ss:hidden"
+            className="rounded-[10px] flex ss:hidden animate-fade-in"
           />
         </div>
       </div>
       <div
-        className={`md:w-1/2 w-full text-center md:text-left ${
-          index % 2 === 0 ? "md:pl-24" : "pl-0"
-        }`}
+        className={`md:w-1/2 w-full text-center md:text-left ${index % 2 === 0 ? "md:pl-24" : "pl-0"
+          }`}
       >
         {item.new && (
           <p className="text-orange text-[13px] xs:text-[15px] tracking-[0.5em] mb-4">
