@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updateNotifMessage } from "../../store/storeSlice";
 import { AnimatePresence, motion } from "framer-motion";
@@ -46,7 +47,7 @@ const Notif = () => {
                         <div className="h-full flex gap-1">
                             <div className="flex items-center h-full gap-2">
                             <i className="fa-solid fa-circle-check text-white text-[16px] ss:text-[18px]"></i>
-                            <h2 className="text-white text-[10px] xs:text-[12px] md:text-[16px] font-bold mr-4">
+                            <h2 className="text-white text-[13px] xs:text-[16px] font-bold mr-4">
                                 {item}
                             </h2>
                             </div>
