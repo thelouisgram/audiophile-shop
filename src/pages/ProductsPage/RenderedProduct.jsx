@@ -1,6 +1,5 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import { useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { updateCart, updateNotifMessage } from "../../store/storeSlice";
 import { goBack } from "../../Utils/Shared";
@@ -19,20 +18,19 @@ const RenderedProduct = ({ product, itemNumber, setItemNumber }) => {
    * Increase item number
    */
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const addItemNumber = useCallback(() => {
+  const addItemNumber = () => {
     setItemNumber((item) => item + 1);
-  }, [setItemNumber]);
+  }
 
   /**
    * Decrease item number
    */
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const minusItemNumber = useCallback(() => {
+  const minusItemNumber =() => {
     if (itemNumber > 1) {
       setItemNumber((item) => item - 1);
     }
-  }, [itemNumber, setItemNumber]);
-
+  }
   /**
    * Render included items
    */
