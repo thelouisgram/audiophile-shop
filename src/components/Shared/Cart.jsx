@@ -98,9 +98,9 @@ const Cart = () => {
         <AnimatePresence>
           {cart && (
             <motion.div
-              initial={{ x: 400, opacity:0 }}
+              initial={{ x: "100%", opacity:0 }}
               animate={{ x: 0, opacity: 1}}
-              exit={{ x: 400, opacity: 0 }}
+              exit={{ x: "100%", opacity: 0 }}
               transition={{ ease: "easeInOut", duration: 0.5 }}
               ref={dropdownRef}
               className={`h-auto w-full flex absolute px-4 xs:px-6 md:px-0 top-[94px] md:justify-end right-0 z-[12]`}

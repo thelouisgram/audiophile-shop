@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updateNotifMessage } from "../../store/storeSlice";
 import { AnimatePresence, motion } from "framer-motion";
@@ -39,8 +39,9 @@ const Notif = () => {
             {notifMessage.map((item, index) => (
                 <AnimatePresence key={index}>
                     <motion.div
-                        initial={{ x: -40 }}
+                        initial={{ x: "-100%" }}
                         animate={{ x: 0 }}
+                        exit={{x: "-100%"}}
                         transition={{ duration: 0.5 }}
                         className="bg-green p-3 w-full rounded-[5px] flex gap-2 justify-between"
                     >
@@ -55,7 +56,7 @@ const Notif = () => {
                                 className="flex items-start h-full cursor-pointer"
                                 onClick={() => handleDelete(index)}
                             >
-                                <i className="fa-solid fa-xmark text-[12px] text-white"></i>
+                                <i className="fa-solid fa-xmark text-[13px] xs:text-[16px] text-white"></i>
                             </div>
                         </div>
                     </motion.div>
