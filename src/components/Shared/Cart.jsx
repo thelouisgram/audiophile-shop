@@ -63,6 +63,7 @@ const Cart = () => {
   const removeAll = () => {
     dispatch(updateCart([]));
     toast.error('Cart is empty')
+    dispatch(toggleCart(false))
   };
 
   useEffect(() => {
