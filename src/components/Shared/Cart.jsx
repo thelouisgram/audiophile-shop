@@ -1,16 +1,18 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import React, { useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   toggleCart,
   updateCartItemsNumber,
   updateCartTotal,
-  updateCart,
-  updateNotifMessage,
+  updateCart
 } from "../../store/storeSlice";
 import CartItems from "../Cart/CartItems";
 import EmptyCart from "../Cart/EmptyCart";
 import ActiveCart from "../Cart/ActiveCart";
 import { AnimatePresence, motion } from "framer-motion";
+import { toast } from "sonner";
 
 const Cart = () => {
   const { cart, cartArray, cartTotal, cartItemsNumber, notifMessage } =
@@ -60,7 +62,7 @@ const Cart = () => {
 
   const removeAll = () => {
     dispatch(updateCart([]));
-    dispatch(updateNotifMessage([...notifMessage, "Cart is empty"]));
+    toast.error('Cart is empty')
   };
 
   useEffect(() => {
@@ -103,7 +105,7 @@ const Cart = () => {
               exit={{ x: "100%", opacity: 0 }}
               transition={{ ease: "easeInOut", duration: 0.5 }}
               ref={dropdownRef}
-              className={`h-auto w-full flex absolute px-4 xs:px-6 md:px-0 top-[94px] md:justify-end right-0 z-[12]`}
+              className={`h-auto w-full flex absolute px-4 xs:px-6 md:px-0 top-[94px] md:justify-end right-0 z-[13]`}
             >
               {cartArray.length < 1 && <EmptyCart />}
               {cartArray.length > 0 && (

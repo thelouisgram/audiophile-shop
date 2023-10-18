@@ -40,9 +40,6 @@ const storeSlice = createSlice({
     updateThankYou: (state, action) => {
       state.thankYou = action.payload;
     },
-    updateNotifMessage: (state, action) => {
-      state.notifMessage = action.payload;
-    },
     toggleNav: (state, action) => {
       state.nav = action.payload;
     }
@@ -59,6 +56,5 @@ export const {
   updateGrandTotal,
   updateCompleteOrder,
   updateThankYou,
-  updateNotifMessage,
   toggleNav,
 } = storeSlice.actions;

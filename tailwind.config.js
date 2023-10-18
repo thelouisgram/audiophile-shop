@@ -25,16 +25,16 @@ export default {
         Manrope : ['Manrope', 'sans-serif'],
       },
       height:{
-        "screen-16" : "calc(100vh - 84px)",
-        "screen-78" : "calc(100vh - 449px)",
-        "screen-98" : "calc(100vh - 420.5px)"
+        "screen-16" : "calc(100dvh - 84px)",
+        "screen-78" : "calc(100dvh - 449px)",
+        "screen-98" : "calc(100dvh - 420.5px)"
       }
     },
     screens: {
-			xs: '300px',
+			xs: '375px',
 			ss: '620px',
 			sm: '768px',
-			md: '1200px',
+			md: '1180px',
 			lg: '1300px',
 			xl: '1700px'
 		},

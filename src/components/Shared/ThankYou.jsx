@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -31,7 +32,7 @@ const ThankYou = () => {
   ));
 
   return (
-    <div className="w-full fixed h-[100vh] z-[201] bg-blackII">
+    <div className="w-full absolute h-full min-h-[700px] z-[201] bg-blackII">
       <div className="flex justify-center items-center w-full h-full px-4 xs:px-6 md:px-0">
         <div className="bg-white rounded-[10px] w-full md:w-[550px] p-6 xs:p-8 md:p-12 flex gap-6 xs:gap-8 flex-col">
           <img

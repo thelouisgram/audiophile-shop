@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -30,7 +31,7 @@ const Navbar = () => {
 
   return (
     // Parent container
-    <div className="bg-black w-full relative h-[84px] z-[10]">
+    <div className="bg-black w-full relative h-[84px] z-[12">
       <header
         className="md:w-[1100px] z-[10] w-full text-white absolute md:relative
         h-full md:mx-auto flex items-center justify-between px-4 xs:px-6 md:p-0"

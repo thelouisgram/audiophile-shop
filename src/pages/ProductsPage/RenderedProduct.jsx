@@ -1,18 +1,20 @@
+/* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { updateCart, updateNotifMessage } from "../../store/storeSlice";
+import { updateCart } from "../../store/storeSlice";
 import { goBack } from "../../Utils/Shared";
 import Others from "./Others";
 import Info from "./Info";
 import Gallery from "./Gallery";
 import YouMayLike from "./YouMayLike";
 import Features from "./Features";
+import { toast } from "sonner";
 
 // eslint-disable-next-line react/prop-types
 const RenderedProduct = ({ product, itemNumber, setItemNumber }) => {
   const dispatch = useDispatch();
-  const { cartArray, notifMessage } = useSelector((state) => state.app);
+  const { cartArray } = useSelector((state) => state.app);
 
   /**
    * Increase item number
@@ -47,13 +49,7 @@ const RenderedProduct = ({ product, itemNumber, setItemNumber }) => {
    */
   const addToCart = () => {
     setItemNumber(1);
-    dispatch(
-      updateNotifMessage([
-        ...notifMessage,
-        // eslint-disable-next-line react/prop-types
-        `Item "${product.name}" has been added to cart`,
-      ])
-    );
+    toast.success(`Item "${product.name}" has been added to cart`)
     // eslint-disable-next-line react/prop-types
     if (cartArray.some((item) => item.id === product.id)) {
       dispatch(

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react'
 import About from '../Shared/About'
 import { Outlet } from 'react-router-dom'

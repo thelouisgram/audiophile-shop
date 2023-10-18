@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     // Hero section
     <div className="w-full bg-black mb-20">
-      <section className="md:w-[1100px] mx-auto h-screen-16 md:h-screen-16 ss:h-[695px] xl:h-[611px] text-center md:text-start flex font-Manrope relative overflow-hidden border-t-[1px] border-border">
+      <section className="md:w-[1100px] mx-auto h-[600px] ss:h-[700px] md:h-[600px] text-center md:text-start flex font-Manrope relative overflow-hidden border-t-[1px] border-border">
         {/* Hero section content */}
         <AnimatePresence>
           <motion.div
@@ -43,7 +43,7 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ ease: "easeInOut", duration: 1 }}
-            className="absolute w-full md:w-auto h-[700px] ss:mt-[-90px] z-[0]"
+            className="absolute w-full ss:w-auto h-[700px] ss:h-[800px] md:h-[700px] mt-[-90px] z-[0]"
           >
             <img
               src="/images/home/desktop/image-hero.png"
