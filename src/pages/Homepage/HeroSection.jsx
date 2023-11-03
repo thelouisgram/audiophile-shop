@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     // Hero section
     <div className="w-full bg-black mb-20">
-      <section className="md:w-[1100px] mx-auto h-[600px] ss:h-[700px] md:h-[600px] text-center md:text-start flex font-Manrope relative overflow-hidden border-t-[1px] border-border">
+      <section className="md:w-[1100px] mx-auto h-[600px] ss:h-[700px] md:h-[610px] text-center md:text-start flex font-Manrope relative overflow-hidden border-t-[1px] border-border">
         {/* Hero section content */}
         <AnimatePresence>
           <motion.div
